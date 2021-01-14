@@ -46,6 +46,7 @@ const Profile = ({ profileInfo, loading }) => {
       </div>
       <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-4">
         {profileInfo
+          // eslint-disable-next-line array-callback-return
           .filter((info) => {
             if (searchProfile === "") {
               return info;
