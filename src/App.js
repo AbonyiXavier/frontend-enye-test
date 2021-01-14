@@ -8,7 +8,7 @@ function App() {
   const [profileInfo, setProfileInfo] = useState([]);
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [profileInfoPerPage, setProfileInfoPerPage] = useState(20);
+  const [profileInfoPerPage] = useState(20);
 
   useEffect(() => {
     const fetchProfile = async () => {
