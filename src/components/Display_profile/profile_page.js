@@ -7,6 +7,7 @@ const Profile = ({ profileInfo, loading }) => {
   const handleSearch = (event) => {
     setSearchProfile(event.target.value);
   };
+
   if (loading) {
     return (
       <div className="fixed top-0 bottom-0 left-0 right-0 z-50 flex flex-col items-center justify-center w-full h-screen overflow-hidden bg-gray-700 opacity-75">
@@ -20,7 +21,11 @@ const Profile = ({ profileInfo, loading }) => {
       </div>
     );
   }
-
+  // const checkColor = (value) => {
+  //   if (value === "paypal") {
+  //     return "green";
+  //   }
+  // };
   return (
     <div className="w-full">
       <div className="flex items-center w-full px-4 py-2 mb-2 text-black bg-blue-100">
@@ -119,7 +124,14 @@ const Profile = ({ profileInfo, loading }) => {
                   <h1 className="px-2 text-sm">{info.Email}</h1>
                 </div>
                 <div>
-                  <p className="inline-block px-2 py-1 mt-2 mr-1 text-sm font-bold text-white duration-300 bg-gray-400 rounded-full md:mr-2 md:px-4 opacity-90">
+                  {/* style={checkColor} */}
+                  <p
+                    className={`inline-block px-2 py-1 mt-2 mr-1 text-sm font-bold text-white duration-300 bg-gray-200 rounded-full md:mr-2 md:px-4 opacity-90 ${
+                      info.PaymentMethod === "check" && "text-green-500"
+                    } ${info.PaymentMethod === "paypal" && "text-purple-400"} ${
+                      info.PaymentMethod === "cc" && "text-red-400"
+                    } `}
+                  >
                     {info.PaymentMethod}
                   </p>
                 </div>
