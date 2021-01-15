@@ -126,11 +126,11 @@ const Profile = ({ profileInfo, loading }) => {
                 <div>
                   {/* style={checkColor} */}
                   <p
-                    className={`inline-block px-2 py-1 mt-2 mr-1 text-sm font-bold text-white duration-300 bg-gray-200 rounded-full md:mr-2 md:px-4 opacity-90 ${
+                    className={`inline-block px-2 py-1 mt-2 mr-1 text-sm font-bold text-black duration-300 bg-gray-200 rounded-full md:mr-2 md:px-4 opacity-90 ${
                       info.PaymentMethod === "check" && "text-green-500"
                     } ${info.PaymentMethod === "paypal" && "text-purple-400"} ${
                       info.PaymentMethod === "cc" && "text-red-400"
-                    } `}
+                    } ${info.PaymentMethod === "paypal" && "text-purple-400"}`}
                   >
                     {info.PaymentMethod}
                   </p>
