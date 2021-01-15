@@ -11,10 +11,10 @@ const Pagination = ({ profileInfoPerPage, totalProfile, Paginate }) => {
       <ul className="flex items-center justify-center mb-5">
         {pageNumbers.map((number) => (
           <li
-            className="flex items-center justify-center w-8 h-8 p-1 mr-3 text-white bg-blue-500 rounded-full cursor-pointer hover:bg-blue-700"
+            className="relative block px-3 py-2 leading-tight text-blue-700 bg-white border border-r-0 border-gray-300 hover:bg-gray-200"
             key={number}
           >
-            <a onClick={() => Paginate(number)} href="!#">
+            <a className="page-link" onClick={() => Paginate(number)} href="!#">
               {number}
             </a>
           </li>
