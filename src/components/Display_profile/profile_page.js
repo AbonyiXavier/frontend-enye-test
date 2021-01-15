@@ -119,7 +119,7 @@ const Profile = ({ profileInfo, loading }) => {
                   <h1 className="px-2 text-sm">{info.Email}</h1>
                 </div>
                 <div>
-                  <p className="mt-4 text-center text-indigo-500">
+                  <p className="inline-block px-2 py-1 mt-2 mr-1 text-sm font-bold text-white duration-300 bg-gray-400 rounded-full md:mr-2 md:px-4 opacity-90">
                     {info.PaymentMethod}
                   </p>
                 </div>
