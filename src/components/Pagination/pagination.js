@@ -9,7 +9,7 @@ const Pagination = ({ profileInfoPerPage, totalProfile, Paginate }) => {
   return (
     <div>
       <div>
-        <ul className="flex pl-0 my-2 list-none rounded">
+        <ul className="flex items-center justify-center pl-0 my-2 rounded mb-5list-none">
           <li className="relative block px-3 py-2 ml-0 leading-tight text-blue-700 bg-white border border-r-0 border-gray-300 rounded-l hover:bg-gray-200">
             <a className="page-link" onClick={() => Paginate(--num)} href="!#">
               Previous
